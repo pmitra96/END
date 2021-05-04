@@ -1,4 +1,4 @@
-## Questions 
+## Assignment Questions 
 
 - What is a neural network neuron?
     - A neural network neuron is a node in the layer. 
