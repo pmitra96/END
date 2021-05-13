@@ -1,10 +1,10 @@
-# Assigment 2 steps and procedure
+# Assignment 2 steps and procedure
 
 ### Network 
-We have used the same network that is discussed in the network 
+We have used the same network that is discussed in the lecture 
 ![Image](https://github.com/pmitra96/END/raw/main/assignment2/images/2_layer_network.png)
 
-### basic relationships and fromulas 
+### basic relationships and formulas 
 The formula of every node and output of activation unit was written in terms of input, weights
 and output of nodes. Attaching screenshot for reference
 ![Image](https://github.com/pmitra96/END/raw/main/assignment2/images/basic_relationships_2.png)
@@ -14,7 +14,7 @@ to update the weights the parital derivates of the total error with respect to e
 calculated using the below formulas 
 ![Image](https://github.com/pmitra96/END/raw/main/assignment2/images/partial_derivatives.png)
 
-### backpropogation 
+### Backpropagation 
 We use the derivatives calculated in the above step to update the weights using the equation below 
 ![Image](https://github.com/pmitra96/END/raw/main/assignment2/images/learning_formula.png)
 
