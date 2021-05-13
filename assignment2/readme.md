@@ -7,7 +7,7 @@ We have used the same network that is discussed in the network
 ### basic relationships and fromulas 
 The formula of every node and output of activation unit was written in terms of input, weights
 and output of nodes. Attaching screenshot for reference
-![Image](https://github.com/pmitra96/END/raw/main/assignment2/images/basic_relationships.png)
+![Image](https://github.com/pmitra96/END/raw/main/assignment2/images/basic_relationships_2.png)
 
 ### partial derivatives 
 to update the weights the parital derivates of the total error with respect to each weight needs to 
