@@ -5,12 +5,12 @@ We have used the same network that is discussed in the lecture
 ![Image](https://github.com/pmitra96/END/raw/main/assignment2/images/2_layer_network.png)
 
 ### basic relationships and formulas 
-The formula of every node and output of activation unit was written in terms of input, weights
-and output of nodes. Attaching screenshot for reference
+Using the inputs and weights we compute the outputs of all the intermediary nodes and output nodes 
+h1,h2,o1,o2,a_h1,a_h2,a_o1,a_o2. 
 ![Image](https://github.com/pmitra96/END/raw/main/assignment2/images/basic_relationships_2.png)
 
 ### partial derivatives 
-to update the weights the parital derivates of the total error with respect to each weight needs to 
+to update the weights, the parital derivates of the total error with respect to each weight needs to 
 calculated using the below formulas 
 ![Image](https://github.com/pmitra96/END/raw/main/assignment2/images/partial_derivatives.png)
 
