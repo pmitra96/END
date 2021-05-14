@@ -48,10 +48,4 @@ we plot the eT vs epoch graph for the following learning rates
 - from the graphs in the result section, we might infer that the higher that learning rate the faster the eT converges
 to minima. but if the learning rate is extremely high (10^7) eT fails to converge to the minima 
 
-
-
- 
- 
-
-
-
+NOTE: there seems a slight mistake in the lecture session where the cell formula for deT/dw3 and deT/dw4 used a_h1 instead of a_h2. 
