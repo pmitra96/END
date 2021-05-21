@@ -3,7 +3,7 @@
 
 ## Data representation 
 - Inputs:
-  - We converted the 2d image of 28*28 into a 1D tensor with shape of 28*28 
+  - We converted the 2d image of 28,28 into a 1D tensor with shape of 28 * 28 
   - we generate a random number and one hot encode it with 784 bits 
 
 Input to the neural network:- 
