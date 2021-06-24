@@ -28,7 +28,7 @@
 #### The model used wasn't very fancy. It is an LSTM model, the following is a rough diagram -
 ![lstm model](https://github.com/kanchana-S/END_Assignment_5/blob/main/images/model.png)
 
-#### The link to the notebook will be found ![here](https://github.com/kanchana-S/END_Assignment7/blob/main/Assignment_7_part_1.ipynb) . The training logs, and the output to 10 random samples form the test dataset can be found ![here](https://github.com/kanchana-S/END_Assignment7/blob/main/logs/lstm_training_log), and ![here](https://github.com/kanchana-S/END_Assignment7/blob/main/logs/output_10_samples) respectively, and also the notebook itself.
+#### The link to the notebook will be found ![here](https://github.com/pmitra96/END/blob/main/assignment7/Assignment_7_part_1.ipynb) . The training logs, and the output to 10 random samples form the test dataset can be found ![here](https://github.com/kanchana-S/END_Assignment7/blob/main/logs/lstm_training_log), and ![here](https://github.com/kanchana-S/END_Assignment7/blob/main/logs/output_10_samples) respectively, and also the notebook itself.
 
 # Assignment 7.2 
 
