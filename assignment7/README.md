@@ -1,4 +1,4 @@
-# END Assignment7 Part 1
+ # END Assignment7 Part 1
 
 ### The following was the requirement for part 1 of the assignment
     Submit the Assignment 5 as Assignment 1. To be clear,
@@ -12,9 +12,32 @@
             Copy-paste the code related to your dataset preparation (100 pts)
             Share your training log text (you MUST have been testing for test accuracy after every epoch) (200 pts)
             Share the prediction on 10 samples picked from the test dataset. (100 pts)
-            
+ #### We have used 3 files to get the sentences and corresponding sentiment scores
+    1. dictionary.txt which has these columns  - 'phrase', 'phrase_id'
+    2. datasetSentence.txt which has these columns - 'sentence_index', 'sentence'
+    3. sentiment_lables.txt which has these columns - 'phrase ids', 'sentiment values'
 
-#### The dataset is split into 70/30 train/test datasets using the following
+#### We need sentiment values and phrases. Which we can get only by combining the above listed three files. The files are joined in the following manner - 
+    join_df_1 = pd.merge(datasetsentence, dictionary, how='left', left_on='sentence', right_on='phrase') # joining to get phrase ids
+    sentimentlabel.columns = ['phrase_id', 'sentiment_values'] #renaming columns to ease joining 
+    join_df_2 = join_df_1.join(sentimentlabel,how="left", lsuffix='l') ## joining to get sentiment values
+    df = join_df_2[["sentence",'sentiment_values']] ## to extract required columns
+#### After this process the final df has arounf 11.2k records. some 600 records dropped because of inconsistency in the data, we tried to overcome those by using difflib, but it didn't work
+
+#### Before splitting it was better to divide the sentiment values into required classes, which was done as follows -
+    def classify_sentiment(row):
+      if 0<row<=0.2:
+        return 1
+      elif 0.2<row<=0.4:
+        return 2
+      elif 0.4<row<=0.6:
+        return 3
+      elif 0.6<row<=0.8:
+        return 4
+      return 5
+      
+     df["sentiment_class"] = df["sentiment_values"].apply(func=classify_sentiment)
+ #### The dataset is split into 70/30 train/test datasets using the following
     def get_index(perc,len_data):
       return int(perc*len_data) 
     
@@ -27,6 +50,8 @@
 
 #### The model used wasn't very fancy. It is an LSTM model, the following is a rough diagram -
 ![lstm model](https://github.com/kanchana-S/END_Assignment_5/blob/main/images/model.png)
+
+#### The link to the notebook will be found ![here](https://github.com/kanchana-S/END_Assignment7/blob/main/Assignment_7_part_1.ipynb) . The training logs, and the output to 10 random samples form the test dataset can be found ![here](https://github.com/kanchana-S/END_Assignment7/blob/main/logs/lstm_training_log), and ![here](https://github.com/kanchana-S/END_Assignment7/blob/main/logs/output_10_samples) respectively, and also the notebook itself.
 
 #### The link to the notebook will be found ![here](https://github.com/pmitra96/END/blob/main/assignment7/Assignment_7_part_1.ipynb) . The training logs, and the output to 10 random samples form the test dataset can be found ![here](https://github.com/pmitra96/END/blob/main/assignment7/lstm_training_log_7_1.txt), and ![here](https://github.com/pmitra96/END/blob/main/assignment7/output_random_samples.txt) respectively, and also the notebook itself.
 
